@@ -8,7 +8,7 @@
         "test": "jest"
     },
     "dependencies": {
-        "packet": "git:https://github.com/EverCrawl/packet-ts.git"
+        "packet": "git://github.com/EverCrawl/packet-ts.git"
     },
     "devDependencies": {
         "@types/jest": "^26.0.14",
