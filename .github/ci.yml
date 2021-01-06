@@ -1,0 +1,31 @@
+on: [push, pull_request]
+
+name: CI
+
+jobs:
+  integration:
+    name: Integration
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: nightly
+          override: true
+      - name: Get Node toolchain
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      # install packetc
+      - run: cargo install --git https://github.com/EverCrawl/packetc.git
+      # run compiler on integration/test.pkt
+      # output into the corresponding directories
+      - run: packetc rust test.pkt rust/src/generated.rs
+      - run: packetc ts test.pkt ts/src/generated.ts
+      # run rust build + test
+      - run: cargo test --manifest-path=rust/Cargo.toml
+      # run ts build + test
+      - run: npm install --prefix ts
+      - run: npm run test --prefix ts
