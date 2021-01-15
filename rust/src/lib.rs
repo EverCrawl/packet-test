@@ -1,6 +1,6 @@
 extern crate packet;
 
-mod generated;
+mod test;
 
 #[cfg(test)]
 mod tests {
@@ -8,8 +8,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        use generated::*;
         use packet::{Reader, Writer};
+        use test::*;
         let data = ComplexType {
             names: vec!["first".to_string(), "second".to_string()],
             positions: vec![Position { x: 0.0, y: 1.0 }],

@@ -10,12 +10,13 @@ checksum = "08c48aae112d48ed9f069b33538ea9e3e90aa263cfa3d1c24309612b1f7472de"
 name = "integration"
 version = "0.1.0"
 dependencies = [
- "packet_rs",
+ "packet-rs",
 ]
 
 [[package]]
-name = "packet_rs"
+name = "packet-rs"
 version = "0.1.0"
+source = "git+https://github.com/EverCrawl/packet-rs.git?branch=master#8807c082699d404611c6d6b36cf6fc546adc668a"
 dependencies = [
  "byteorder",
  "thiserror",
