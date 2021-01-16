@@ -2,6 +2,6 @@
 node_modules
 coverage
 dist
-generated.ts
+test.ts
 package-lock.json
 yarn.lock

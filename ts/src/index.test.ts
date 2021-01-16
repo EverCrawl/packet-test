@@ -1,5 +1,5 @@
 import { Reader, Writer } from "packet";
-import { read, write, ComplexType, Flag } from "./generated";
+import { read, write, ComplexType, Flag } from "./test";
 
 describe("generated", function () {
     it("works", function () {
