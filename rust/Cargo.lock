@@ -2,9 +2,9 @@
 # It is not intended for manual editing.
 [[package]]
 name = "byteorder"
-version = "1.3.4"
+version = "1.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "08c48aae112d48ed9f069b33538ea9e3e90aa263cfa3d1c24309612b1f7472de"
+checksum = "ae44d1a3d5a19df61dd0c8beb138458ac2a53a7ac09eba97d55592540004306b"
 
 [[package]]
 name = "integration"
@@ -15,8 +15,8 @@ dependencies = [
 
 [[package]]
 name = "packet-rs"
-version = "0.1.0"
-source = "git+https://github.com/EverCrawl/packet-rs.git?branch=master#8807c082699d404611c6d6b36cf6fc546adc668a"
+version = "0.1.2"
+source = "git+https://github.com/EverCrawl/packet-rs.git?branch=master#27e8a445654f414704c0525f60fd1412196a34fa"
 dependencies = [
  "byteorder",
  "thiserror",
@@ -42,9 +42,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "1.0.57"
+version = "1.0.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4211ce9909eb971f111059df92c45640aad50a619cf55cd76476be803c4c68e6"
+checksum = "c700597eca8a5a762beb35753ef6b94df201c81cca676604f547495a0d7f0081"
 dependencies = [
  "proc-macro2",
  "quote",

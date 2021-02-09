@@ -20,6 +20,9 @@ mod tests {
                 c: 30u8,
                 d: 100u8,
             }],
+            opt: Some(0),
+            opt_s: None,
+            opt_e: Some(Flag::A),
         };
         let bin: &[u8] = &[
             2, 0, 0, 0, // names.len()
@@ -36,6 +39,11 @@ mod tests {
             1, 0, 0, 0,   // values[0].b
             30,  // values[0].c
             100, // values[0].d
+            1,   // opt == Some
+            0,   // opt
+            0,   // opt_s == None
+            1,   // opt_e == Some
+            1,   // opt_e
         ];
         {
             let mut writer = Writer::new();

@@ -25,6 +25,8 @@ jobs:
       - run: packetc rust test.pkt rust/src
       - run: packetc ts test.pkt ts/src
       # run rust build + test
+      # force cache to update to latest master
+      - run: cargo update --manifest-path=rust/Cargo.toml
       - run: cargo test --manifest-path=rust/Cargo.toml
       # run ts build + test
       - run: npm install --prefix ts

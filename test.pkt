@@ -19,7 +19,10 @@ ComplexType: struct {
     names: string[],
     positions: Position[],
     flag: Flag,
-    values: Value[]
+    values: Value[],
+    opt?: uint8,
+    opt_s?: Value,
+    opt_e?: Flag
 }
 
 export ComplexType
