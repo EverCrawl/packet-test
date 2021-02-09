@@ -13,6 +13,8 @@ describe("generated", function () {
                 c: 30,
                 d: 100,
             }],
+            opt: 0,
+            opt_e: Flag.A
         };
         let bin = new Uint8Array([
             2, 0, 0, 0, // names.len()
@@ -29,6 +31,11 @@ describe("generated", function () {
             1, 0, 0, 0,   // values[0].b
             30,  // values[0].c
             100, // values[0].d
+            1,   // opt == Some
+            0,   // opt
+            0,   // opt_s == None
+            1,   // opt_e == Some
+            1,   // opt_e
         ]).buffer;
         {
             let writer = new Writer();
